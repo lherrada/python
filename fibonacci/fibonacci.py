@@ -51,7 +51,6 @@ def fib3(n):
  return fibohash[n]
   
 
-
 if __name__ == '__main__':
  import timeit
 
@@ -68,15 +67,3 @@ if __name__ == '__main__':
 
   print "n=%d,\tfib0: %7.6f\tfib1: %7.6f\tfib3: %7.6f\n" % (i,time1,time2,time3),
 
-
-#t1=timeit.Timer("fib0(2)")
-#time1=t1.timeit(3)
-
-
-#print "Fib1(10) is %7.6f" % timeit.timeit('fib1(10)',number=1)
-
-
-#n=1500
-#print "Iterativo (LHM) -----> ",fib0(n)
-#print "Iterativo       -----> ",fib1(n)
-#print "Recursivo -----> ",fib2(n)
