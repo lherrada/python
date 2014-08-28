@@ -4,6 +4,10 @@
 Fibonacci numbers:
 F(n)=F(n-1) + F(n-2)
 with F(0)=0 and F(1)=1
+
+This script measures execution time
+for different implementation of Fibonacci
+series
 """
 
 #Iterative solution
