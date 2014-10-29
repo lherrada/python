@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["table"]});
+      google.setOnLoadCallback(drawTable);
+
+      function drawTable() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Entries');
+        data.addColumn('string', 'Size');
+        data.addRows([
+        {% for k,v in result %}
+          ['{{ k }}','{{ v }}'],
+        {% endfor %}
+        ]);
+	data.setProperty(0,0,{style: 'width:500px'});
+        var table = new google.visualization.Table(document.getElementById('table_div'));
+        table.draw(data, {showRowNumber: true,width: 600,allowHtml: true});
+      }
+    </script>
+  </head>
+
+  <body>
+   <h1>Directory: {{ dirpath }} </h1>
+    <div id="table_div"></div>
+  </body>
+</html>
+
