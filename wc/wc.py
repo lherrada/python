@@ -103,7 +103,7 @@ def count_words_lines_bytes(filename,opts):
 
  #Observation:
  #Couting of bytes (option -c) and characters (option -m) is performed in the very same way which
- #is by applying stat system call to the filename.
+ #is by applying stat system call to the filename. The C implementation in GNU core does the same.
 
  results={'-c':countbytes,'-l':countlines,'-w':wordcount,'-m':countbytes}
  x = [str(results[i]) for i in opts]  
