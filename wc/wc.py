@@ -121,7 +121,10 @@ def report(results,n):
   justification.append(q) 
  
  rj=justification.pop() 
+ #Right justification for the numbers
  myformat=' '.join([ '{'+str(k)+':>'+str(v)+'}' for (k,v) in enumerate(justification)]) 
+ 
+ #Left Justification for the filename
  myformat+=' {'+str(n) + ':<' + str(rj)+'}'
 
  for i in results:
@@ -140,6 +143,7 @@ def total(results,n):
 
 #Implementation of the option --files0_from
 def files0_from(datain,args):
+ #Not allowing filenames in the command line when this option is used
  if args: 
   print "extra operand %s" % args[0]
   print "file operands cannot be combined with --files0-from"
@@ -153,9 +157,9 @@ def files0_from(datain,args):
    input1=open(datain)
   else:
    print "cannot open %s for reading: No such file or directory" % datain
+   
   # Filenames contained in input1 MUST BE NULL separated. If so, each filename is stored in
   # list args  
-  #
  args=[]
  for i in input1:  
   i=i.strip()
