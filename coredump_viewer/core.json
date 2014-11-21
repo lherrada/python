@@ -1,0 +1,6 @@
+{
+ "in.tftpd": "/usr/sbin/in.tftpd",
+ "coredump1": "/home/lherrada/programming/C/coredump/coredump1",
+ "httpd": "/usr/sbin/httpd"
+}
+
