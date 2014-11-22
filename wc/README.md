@@ -6,19 +6,22 @@ Side Notes about wc.py
 As file size increases, the execution time of GNU wc version becomes remarkable better that my wc python version.
 However, for sizes less than 100 MB the execution time is comparable.
  
-Filesize|C GNU(sec)|python (sec)|
--------- ---------  ------------
-104 MB|1.064|1.70|
-196MB|2.17|3.19|
-588MB|6.413|9.69|  
+|Filesize|C GNU(sec)|python (sec)|
+--------- ---------  ------------
+|104 MB|1.064|1.70|
+|196MB|2.17|3.19|
+|588MB|6.413|9.69|  
  
 Conclusion: It is difficult to beat compiled code over interpreted one.
  
 ### Options: 
 All of the command options were implemented except one. 
 The handling of command line options is managed by module getopt.
-I decided to skip option 'L' since I could not figure out and efficient way to calculate maximum line length,
-I could have used brute force (max function or comparison of subsequent values) but that is computationally expensive.
+
+I decided to skip option 'L' since I could not figure out and efficient
+way to calculate maximum line length. 
+I could have used brute force (max function or comparison of subsequent values)
+but that is computationally expensive.
  
 ### Data Source:
     I considered the 3 posible data sources:
