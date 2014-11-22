@@ -2,28 +2,28 @@ This script is my own implementation of Linux command wc.
 
 Side Notes about wc.py
 
-1.- Performance:
+# Performance:
 As file size increases, the execution time of GNU wc version becomes remarkable better that my wc python version.
 However, for sizes less than 100 MB the execution time is comparable.
  
-Filesize       C GNU(sec)   python (sec)
-104 MB     1.064               1.70
-196MB       2.17                3.19
-588MB       6.413              9.69  
+Filesize|C GNU(sec)|python (sec)|
+104 MB|1.064|1.70|
+196MB|2.17|3.19|
+588MB|6.413|9.69|  
  
 Conclusion: It is difficult to beat compiled code over interpreted one.
  
 2.-  Options: 
-      All of the command options were implemented except one. 
-      The handling of command line options is managed by module getopt.
-      I decided to skip option 'L' since I could not figure out and efficient way to calculate maximum line length,
-      I could have used brute force (max function or comparison of subsequent values) but that is computationally expensive.
+All of the command options were implemented except one. 
+The handling of command line options is managed by module getopt.
+I decided to skip option 'L' since I could not figure out and efficient way to calculate maximum line length,
+I could have used brute force (max function or comparison of subsequent values) but that is computationally expensive.
  
 3.- Data Source:
-     I considered the 3 posible data sources:
-     a.- several filenames from command line
-     b.- Standard input
-     c.- --files0-from=file option
+    I considered the 3 posible data sources:
+    1. several filenames from command line
+    2. Standard input
+    3. The --files0-from=file option
  
  4.- Format of the output:
        I used right justification for the numbers and left justification for filename.
