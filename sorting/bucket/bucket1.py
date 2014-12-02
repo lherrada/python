@@ -24,25 +24,29 @@ def rgen(n,m):
   num=random.randint(0,m)
   yield num
 
-nbuckets=10
-#Setting up an array of empty buckets
-nodes=[[] for _ in xrange(nbuckets)]
-maxvalue=99
-nlength=50
+def main():
+ nbuckets=10
+ #Setting up an array of empty buckets
+ nodes=[[] for _ in xrange(nbuckets)]
+ maxvalue=99
+ nlength=30
 
 #Placing each number on its bucket and within the bucket,
 #placing number is a position that  make the whole array 
 #sorted
 
-for number in rgen(nlength,maxvalue):
- print number,
- index=number/nbuckets
- insertandsort(nodes[index],number)
+ for number in rgen(nlength,maxvalue):
+  print number,
+  index=number/nbuckets
+  insertandsort(nodes[index],number)
 
 #Putting buckets all together
-print "\n"
-result=[]
-for x in nodes:
- result+=x
+ print "\n"
+ result=[]
+ for x in nodes:
+  result+=x
 
-print result
+ print result
+
+if __name__=='__main__':
+ main()
