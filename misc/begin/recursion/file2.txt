@@ -1,0 +1,7 @@
+Peru: Lima 
+Alemania: Berlin
+Italia: Roma
+L
+Mexico: DF
+Argentina: Buenos Aires
+Ecuador: Quito

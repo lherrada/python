@@ -1,0 +1,17 @@
+Exception:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/pip.py", line 252, in main
+    self.run(options, args)
+  File "/usr/lib/python2.7/dist-packages/pip.py", line 401, in run
+    InstallRequirement.from_line(name, None))
+  File "/usr/lib/python2.7/dist-packages/pip.py", line 1228, in from_line
+    return cls(req, comes_from, url=url)
+  File "/usr/lib/python2.7/dist-packages/pip.py", line 1185, in __init__
+    req = pkg_resources.Requirement.parse(req)
+  File "build/bdist.linux-x86_64/egg/pkg_resources.py", line 2789, in parse
+    reqs = list(parse_requirements(s))
+  File "build/bdist.linux-x86_64/egg/pkg_resources.py", line 2717, in parse_requirements
+    "version spec")
+  File "build/bdist.linux-x86_64/egg/pkg_resources.py", line 2682, in scan_list
+    raise ValueError(msg, line, "at", line[p:])
+ValueError: ('Expected version spec in', 'Django=1.7', 'at', '=1.7')

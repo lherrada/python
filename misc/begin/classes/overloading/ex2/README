@@ -1,0 +1,10 @@
+Overloading Operators:
+Suppose you've created a Vector class to represent two-dimensional vectors, what happens when you use the plus operator to add them? Most likely Python will yell at you.
+
+You could, however, define the __add__ method in your class to perform vector addition and then the plus operator would behave as per expectation:
+
+
+Data Hiding:
+An object's attributes may or may not be visible outside the class definition. For these cases, you can name attributes with a double underscore prefix, and those attributes will not be directly visible to outsiders.
+
+Python protects those members by internally changing the name to include the class name. You can access such attributes as object._className__attrName. If you would replace your last line as following, then it would work for you:

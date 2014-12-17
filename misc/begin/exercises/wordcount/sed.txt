@@ -1,0 +1,4 @@
+sed -i.bak -e '/<article>/d' -e '/<\/article>/d' web.txt
+sed -i'' -e 's/<title>/Title:/g' -e 's/<\/title>//g' web.txt
+sed -i'' -e 's/<para>/\x0/g' -e 's/<\/para>/\x0/g' -e '/\x0/d' web.txt
+

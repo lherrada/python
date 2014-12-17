@@ -1,0 +1,4 @@
+Yahoo:	 145000
+Facebook:		 140000
+Google: 155000
+Amazon:   140000
