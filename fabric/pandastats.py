@@ -13,7 +13,7 @@ import time
 
 env.skip_bad_hosts=True
 env.user="indigoadmin"
-env.password="t@nD0or!"
+env.password="xxxxxxxx"
 
 #Creating logger
 logger=logging.getLogger(sys.argv[0])
